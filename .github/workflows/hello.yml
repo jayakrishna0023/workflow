@@ -1,9 +1,14 @@
-name: Hello action
-on: push
-jobs: 
-  hello:
-    run-on: ubuntu-latest
+name: My First Action 🚀
 
-    steps: 
-    -  names: print hello world 
-    run: echo "hello world for testing"
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run a script
+        run: echo "Hello, Jai 👋🚀"
