@@ -1,0 +1,19 @@
+name : python runnable automations
+on : push
+
+jobs :
+    demo :
+        runs-on : ubuntu-latest
+
+        steps :
+        - name : create a repo
+          uses : actions/checkout@3
+
+
+        - name : setup python 
+          uses : actions/setup-python@v4
+          with :
+            python-version : '3.10'
+                
+        - name : run python script
+          run : python demo.py 
